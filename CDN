@@ -5,3 +5,17 @@ server.
 This service is effective in speeding the delivery of content of websites with high traffic and websites that have global reach. 
 The closer the CDN server is to the user geographically, the faster the content will be delivered to the user. 
 CDNs also provide protection from large surges in traffic.
+
+WEB 2.0 supports various type of media : Text, Images, Flash, Audio, Video, etc. When companies need to serve such diverse forms of content, 
+most of the time, they distribute them by hosting them in servers in their data center(s). 
+
+But the consumer pattern is not always uniform. There may be sudden bursts of traffic requesting web based content from consumers 
+located around the globe. 
+To accommodate for the demand, companies need to estimate and provision additional servers in quantities enough for handling peak loads. 
+More over, on the Internet, there is always a factor of RTT (Round Trip Time) and Packet Loss that needs to be considered, and these
+parameters have a higher effect on the consumers who are located at greater distances from the servers.
+
+It is to accommodate for these limitations, that Content Delivery Networks were created.
+
+Diagram :
+http://54.144.79.47/wp-content/uploads/2011/01/contentdeliverynetworkblockdiagram.jpeg
