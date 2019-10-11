@@ -6,3 +6,11 @@ Advantages of Microservices :
 4.	Mixed Technology stack
 5.	Granular Scaling (based on service requirements)
 
+The drawbacks of microservices :
+
+1.Developers must deal with the additional complexity of creating a distributed system.
+2.Deployment complexity. In production, there is also the operational complexity of deploying and managing a system comprised of many 
+different service types.
+3.As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate 
+at design time.
+
