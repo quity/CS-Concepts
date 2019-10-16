@@ -1,3 +1,11 @@
+ The term Service refers to a software functionality or a set of software functionalities (such as the retrieval of specified information 
+ or the execution of a set of operations) with a purpose that different clients can reuse for different purposes,together with the
+ policies that should control its usage (based on the identity of the client requesting the service, for example).
+
+Evolution :
+
+monolithic ->  N-TIER  ->  SERVICE -> MICRO SERVICE -> SEERVERLESS
+
 Advantages of Microservices :
 
 1.	Independent Deployment
@@ -13,4 +21,5 @@ The drawbacks of microservices :
 different service types.
 3.As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate 
 at design time.
+
 
