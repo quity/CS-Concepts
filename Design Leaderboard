@@ -1,3 +1,13 @@
+Features:
+
+1. Leaderboards should be updated continuously. Stale data or rankings that change slowly can discourage users so make to always give 
+   users a sense of progress and gratification.
+   
+2. A global leaderboard that contains username, score value, date and maybe other details (e.g. country, level of the game etc.). 
+   This leaderboard contains only one entry per player, with her best score.
+   
+3. For more : check reference.   
+
 Reference :
 
 https://dgkanatsios.com/2018/01/08/designing-a-general-purpose-game-leaderboard/
