@@ -4,9 +4,21 @@ Apache:
 
 Process Driven Approach 
 Creates a new thread for each request.
-
+Serves static content using the file-based method
+Processes dynamic content within the server
+Request Interpretation : Passes File system location
+Supports customization of web server through dynamic modules.
+Allows additional configuration on a per-directory basis via .htaccess files.
+This architecture allows non-privileged users to control certain aspects of their website without granting them permission to edit the 
+main config. This is big!
 
 NGINX:
 
 Event-Driven approach
 Handles multiple requests within one thread
+NGiNX – It has a lightweight structure, and much faster architecture than that of Apache.
+It doesn’t process dynamic content.
+Request Interpretation : Passes URI to interpret requests.
+Not flexible enough to support dynamic modules and loading.
+Doesn’t allow additional configuration
+It, on the other hand, has a downside. It doesn’t provide additional configuration. However, it works in your favour as this increases the performance.
