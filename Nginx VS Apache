@@ -1,0 +1,12 @@
+Reference : https://serverguy.com/comparison/apache-vs-nginx/
+
+Apache:
+
+Process Driven Approach 
+Creates a new thread for each request.
+
+
+NGINX:
+
+Event-Driven approach
+Handles multiple requests within one thread
