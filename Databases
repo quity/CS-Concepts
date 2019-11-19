@@ -3,4 +3,20 @@
 
 2. B Trees for indexing in OLTP (Transaction)
 3. Encoding of Data
-4.
+4. Data Flow :
+ 
+ Ways how data flows between processes:
+• Via databases 
+• Via service calls 
+• Via asynchronous message passing 
+
+a. Databases, where the process writing to the database encodes the data and the
+process reading from the database decodes it
+
+b. RPC and REST APIs, where the client encodes a request, the server decodes the
+request and encodes a response, and the client finally decodes the response
+
+c. Asynchronous message passing (using message brokers or actors), where nodes
+communicate by sending each other messages that are encoded by the sender
+and decoded by the recipient
+
