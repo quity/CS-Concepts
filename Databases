@@ -20,3 +20,15 @@ c. Asynchronous message passing (using message brokers or actors), where nodes
 communicate by sending each other messages that are encoded by the sender
 and decoded by the recipient
 
+Using a message broker has several advantages compared to direct RPC:
+
+• It can act as a buffer if the recipient is unavailable or overloaded, and thus
+improve system reliability.
+• It can automatically redeliver messages to a process that has crashed, and thus
+prevent messages from being lost.
+• It avoids the sender needing to know the IP address and port number of the
+recipient (which is particularly useful in a cloud deployment where virtual
+machines often come and go).
+• It allows one message to be sent to several recipients.
+• It logically decouples the sender from the recipient (the sender just publishes
+messages and doesn’t care who consumes them).
