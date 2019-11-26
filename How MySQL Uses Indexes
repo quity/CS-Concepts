@@ -1,0 +1,5 @@
+How MySQL Uses Indexes :
+
+1.Indexes are used to find rows with specific column values quickly
+2. Most MySQL indexes (PRIMARY KEY, UNIQUE, INDEX, and FULLTEXT) are stored in B-trees. 
+3. Exceptions are that indexes on spatial data types use R-trees, and that MEMORY tables also support hash indexes.
