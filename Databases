@@ -32,3 +32,24 @@ machines often come and go).
 • It allows one message to be sent to several recipients.
 • It logically decouples the sender from the recipient (the sender just publishes
 messages and doesn’t care who consumes them).
+
+
+***************************************
+
+ORMs(Object-relational mapping) are not mutually exclusive with Stored Procedures. Most ORMs can utilize stored procedures. Most ORMs generate Stored Procedures if you so choose. So it the issue is not either or.
+
+ORMs may generate unacceptable SQL (in terms of performance) and you may sometimes want to override that SQL with hand-crafted SQL. One of the ways to accomplish this is by using SPs(stored procedures).
+
+In DotNet, Don't use stored procedures if:
+
+If you are not familiar with stored procedures (not your case, but included for completeness).
+
+If you don't want to introduce a layer of complexity and versifying to your project.
+
+You are creating an application that should work with different databases or that would have to be replicated across several database servers (this last restriction may apply for some databases only).
+
+Note that triggers are not to be compared with ORMs. Triggers do functions that are better not be in your application code (such as logging or synchronizing data across databases).
+
+Some people prefer the use of Stored Procedures over SQL in code for different reasons such as security (for example to prevent SQL injection) and for their claimed speed. However, this is somewhat debatable and needs detailed discussion.
+
+If your ORM can't generate Stored Procedures, and you have to write a large system, then you need to weight of the extra hand coding based on your case.
