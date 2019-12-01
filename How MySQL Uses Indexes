@@ -3,3 +3,11 @@ How MySQL Uses Indexes :
 1.Indexes are used to find rows with specific column values quickly
 2. Most MySQL indexes (PRIMARY KEY, UNIQUE, INDEX, and FULLTEXT) are stored in B-trees. 
 3. Exceptions are that indexes on spatial data types use R-trees, and that MEMORY tables also support hash indexes.
+
+
+Storage Engine : InnoDB
+
+InnoDB offers a lot more features than MyISAM that increases performance.
+Uses row-Level Locking which has better performance than table-level locking
+InnoDB allows parallel INSERT/UPDATE/DELETE queries to be ran on the same table, unlike MyISAM where each query has to wait its turn to run.
+InnoDB supports foreign key functionality which is a huge advantage
