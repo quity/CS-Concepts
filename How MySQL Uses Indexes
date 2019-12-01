@@ -11,3 +11,8 @@ InnoDB offers a lot more features than MyISAM that increases performance.
 Uses row-Level Locking which has better performance than table-level locking
 InnoDB allows parallel INSERT/UPDATE/DELETE queries to be ran on the same table, unlike MyISAM where each query has to wait its turn to run.
 InnoDB supports foreign key functionality which is a huge advantage
+
+
+A storage engine is what MySQL uses to store, handle and retrieve data from a database table.
+
+mysql> show engines will show you a list of supported engines
