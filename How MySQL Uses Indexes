@@ -1,18 +1,29 @@
+Stored Procedures :
+
+MySQL supports stored routines (procedures and functions). A stored routine is a set of SQL statements that can be stored in the server. 
+Once this has been done, clients don't need to keep reissuing the individual statements but can refer to the stored routine instead.
+
+Stored routines require the proc table in the mysql database. 
+
+Stored routines can be particularly useful in certain situations:
+
+1. When multiple client applications are written in different languages or work on different platforms, but need to perform the same database operations.
+2.When security is paramount. Banks, for example, use stored procedures and functions for all common operations. This provides a consistent and secure environment, and routines can ensure that each operation is properly logged. In such a setup, applications and users would have no access to the database tables directly, but can only execute specific stored routines.
+
+A stored procedure or function is associated with a particular database. This has several implications:
+
+When the routine is invoked, an implicit USE db_name is performed (and undone when the routine terminates). USE statements within stored routines are not permitted.
+
+You can qualify routine names with the database name. This can be used to refer to a routine that is not in the current database. For example, to invoke a stored procedure p or function f that is associated with the test database, you can say CALL test.p() or test.f().
+
+When a database is dropped, all stored routines associated with it are dropped as well.
+
+Stored functions cannot be recursive.
+
+
+
 How MySQL Uses Indexes :
 
 1.Indexes are used to find rows with specific column values quickly
 2. Most MySQL indexes (PRIMARY KEY, UNIQUE, INDEX, and FULLTEXT) are stored in B-trees. 
 3. Exceptions are that indexes on spatial data types use R-trees, and that MEMORY tables also support hash indexes.
-
-
-Storage Engine : InnoDB
-
-InnoDB offers a lot more features than MyISAM that increases performance.
-Uses row-Level Locking which has better performance than table-level locking
-InnoDB allows parallel INSERT/UPDATE/DELETE queries to be ran on the same table, unlike MyISAM where each query has to wait its turn to run.
-InnoDB supports foreign key functionality which is a huge advantage
-
-
-A storage engine is what MySQL uses to store, handle and retrieve data from a database table.
-
-mysql> show engines will show you a list of supported engines
