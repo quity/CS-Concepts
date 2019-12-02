@@ -24,3 +24,32 @@ We don’t have to fetch the messages in a first-in, first-out order. Instead, w
 
 
 Ref : https://www.geeksforgeeks.org/ipc-using-message-queues/
+
+The choice of IPC mechanism boils down to making, three primary considerations:
+
+A:) Transfer buffer size and data mechanism.
+
+B:) Memory allocation mechanism.
+
+C:) Locking principal.
+
+Linux offers 17 different IPC mechanisms, namely:
+
+Signals
+Anonymous Pipes
+Named Pipes or FIFOs
+SysV Message Queues
+POSIX Message Queues
+SysV Shared memory
+POSIX Shared memory
+SysV semaphores
+POSIX semaphores
+FUTEX locks
+File-backed and anonymous shared memory using mmap
+UNIX Domain Sockets
+Netlink Sockets
+Network Sockets
+Inotify mechanisms
+FUSE subsystem
+D-Bus subsystem
+Personally, if size of data is small I use Named Pipes. If size of data is large, I use Unix Domain Sockets for better throughput. Overall, Unix Domain sockets are the safest bet for any IPC.
