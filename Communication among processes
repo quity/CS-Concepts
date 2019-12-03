@@ -1,5 +1,14 @@
 http://pages.cs.wisc.edu/~adityav/Evaluation_of_Inter_Process_Communication_Mechanisms.pdf
 
+Inter-process communication mechanisms are used for transferring data between processes. These mechanisms can be broadly classified based 
+on the following criteria :
+
+• Whether the communication is restricted to related
+processes.
+• Whether the communication is write-only, readonly or read/write.
+• Whether the communication is between two processes or more.
+• Whether the communication is synchronous, i.e. the reading process blocks on a read.
+
 IPC :
 
 SOCKET COMMUNICATION :
