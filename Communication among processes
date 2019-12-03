@@ -55,3 +55,30 @@ Inotify mechanisms
 FUSE subsystem
 D-Bus subsystem
 Personally, if size of data is small I use Named Pipes. If size of data is large, I use Unix Domain Sockets for better throughput. Overall, Unix Domain sockets are the safest bet for any IPC.
+
+
+*******************************************************
+ shared memory to be the fastest form of IPC because all processes share the same piece of memory, hence we avoid copying data between process memory and kernel memory. Access to this memory is similar to any memory reference and does not need 
+special system support like system calls. It also permits multiple (>2) processes to perform bi-directional communication. 
+However, the biggest caveat of shared memory
+is that the system offers no synchronization guarantees. The user processes need to coordinate their accesses into
+the shared region. This is a potential security threat as well.
+
+
+
+Pipes offer a flexible and fast way for communication
+between two processes. Each pipe is uni-directional,
+hence we need two pipes for bidirectional communication.
+The UNIX implementation of pipes represents them as
+a file, which can easily substitute the stdin or stdout
+for a process, offering great programming convenience.
+However, the maximum number of pipes per process is
+limited to 1024, which is the size of the file-descriptor
+table. Pipes offer automatic synchronization through a
+reserved kernel buffer.
+
+Sockets allow bidirectional communication, but their performance for IPC on the same machine is quite poor.
+Being a packet-based mechanism, sockets may require breaking down large messages into multiple packets, increasing communication latency. However, sockets offer some unique advantages for IPC - sockets can be used for IPC between processes on different machines, allowing scalability for SW growth. Being a standardized mechanism governed by a recognized protocol, sockets
+are very useful for connecting with and testing unknown
+or opaque processes (black boxes). Hence, one can recognize that each IPC mechanism offers unique advantages
+which render them useful for different use-cases.
