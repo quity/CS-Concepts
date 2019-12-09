@@ -1,0 +1,11 @@
+https://www.scottklement.com/rpg/socktut/nonblocking.html
+
+1. By default, TCP sockets are in "blocking" mode.
+
+2. The "non-blocking" mode is set by changing one of the socket's "flags". The flags are a series of bits, each one representing a different capability of the socket. So, to turn on non-blocking mode requires three steps:
+
+Call the fcntl() API to retrieve the socket descriptor's current flag settings into a local variable.
+
+In our local variable, set the O_NONBLOCK (non-blocking) flag on. (being careful, of course, not to tamper with the other flags)
+
+Call the fcntl() API to set the flags for the descriptor to the value in our local variable.
