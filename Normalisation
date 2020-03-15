@@ -1,0 +1,30 @@
+Purpose of Normalisation :
+
+-> Data Consistency
+-> Faster search
+-> Ensure proper structure
+-> Clean up data
+
+1st Normal Form:
+
+-> Only one of each in each column
+-> Unique identification of rows
+
+
+2nd Normal Form :
+
+-> Remove redundancy of data in rows
+
+3rd Normal Form :
+
+-> Only columns with direct dependency of PK will be in entity.
+
+From modelling to design :
+
+-> Create Foreign keys
+-> Enter datatypes
+-> Resolve many to many relation to intermediate table.
+
+
+Rule of Thumb:
+Foreign key is on the many side and PK is on the one side.
