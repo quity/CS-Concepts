@@ -1,6 +1,37 @@
+https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md
+
 If the goal of your API is to enable communication between two distributed components that you own and control, and processing efficiency is a major concern, then I think that RPC in general and gRPC in particular might be excellent choices for designing and implementing your API.
 
 However, if your primary objective is to make your software more malleable by breaking it down into components that are better isolated from each others' assumptions, or if your purpose is to open up your systems for future integration by other teams, then you should focus your efforts on HTTP/JSON APIs.
 
 
 https://cloud.google.com/blog/products/application-development/rest-vs-rpc-what-problems-are-you-trying-to-solve-with-your-apis
+
+
+REST API -
+
+Uniform Interface -
+Cacheable -
+Cient Server Arch
+Layered -
+Stateless -
+
+https://www.geeksforgeeks.org/rest-api-architectural-constraints/
+
+Practice for good api design -
+
+Versioning
+status code
+use noun in uri
+
+
+Disadvantages of microservices -
+
+- overhead of communication b/w each microservice
+- In case of st
+
+Advantages -
+
+- use required stack/language for each MS.
+- each developer can work on specific MS.
+
