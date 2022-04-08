@@ -35,3 +35,8 @@ Advantages -
 - use required stack/language for each MS.
 - each developer can work on specific MS.
 
+To scale your API by -
+supporting an increased number of API calls, there are many things you can do at the application level. 
+Database query optimization, sharding databases, adding missing indexes, utilizing caching, doing expensive operations asynchronously, writ‐ ing efficient code, and tuning web servers help in increasing the throughput and decreasing the latency.
+
+
