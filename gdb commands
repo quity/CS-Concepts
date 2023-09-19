@@ -1,0 +1,13 @@
+# Print Hexadecimal value
+p/x variable
+
+# Binary
+p/t variable
+
+#You can assign breakpoints to specific threads using the break
+<linespec> thread <threadnumber> command
+
+	script stack walk
+	script heap walk
+	
+	set print elements 0
